@@ -8,12 +8,17 @@ window.addEventListener("load", (event) => {
 
     fetchPromise.then((response) => {
         const jsonPromise = response.json()
+        console.log(response)
 
         jsonPromise.then((json) => {
             console.log(json);
+
             let index = Math.floor((Math.random() * 6))
+            
+            //TO DO: make this modular by adding the code to fetchPlanet.js and importing
+            
             planetSelect.addEventListener("click", (event) => {
-                destinationElement.innerHTML += `<h3> 
+                destinationElement.innerHTML = `<h3> 
                     Planet: ${json[index].name} <br />
                     Diameter: ${json[index].diameter} <br />
                     </h3><br />
