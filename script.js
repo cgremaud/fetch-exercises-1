@@ -11,12 +11,14 @@ window.addEventListener("load", (event) => {
 
         jsonPromise.then((json) => {
             console.log(json);
+            let index = Math.floor((Math.random() * 6))
             planetSelect.addEventListener("click", (event) => {
                 destinationElement.innerHTML += `<h3> 
-                    Planet: ${json[1].name} <br />
-                    Diameter: ${json[1].diameter} <br />
+                    Planet: ${json[index].name} <br />
+                    Diameter: ${json[index].diameter} <br />
                     </h3><br />
-                    <img height = "200px" src = ${json[1].image}>`;
+                    <img height = "250px" src = ${json[index].image}>`;
+                    index = Math.floor((Math.random() * 5))
                 });
         });
     });
