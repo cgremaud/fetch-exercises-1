@@ -23,7 +23,7 @@ window.addEventListener("load", (event) => {
                     Diameter: ${json[index].diameter} <br />
                     </h3><br />
                     <img height = "250px" src = ${json[index].image}>`;
-                    index = Math.floor((Math.random() * 5))
+                    index = Math.floor((Math.random() * 6))
                 });
         });
     });
